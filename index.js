@@ -1,24 +1,20 @@
 const { Telegraf, Markup } = require('telegraf');
 const axios = require('axios')
 
-const bot = new Telegraf(process.env.token)
+const bot = new Telegraf('1829167937:AAGS8Z8vNE8tMcaRt6Jb0jx1jkm6yb7cX04')
 
 let pais = 'Tester'
 
 bot.command('start', (ctx) => {
-  return ctx.replyWithPhoto({ url: 'https://telegra.ph/file/c3f19e89e109e1534b02a.jpg' },
+  return ctx.replyWithPhoto({ url: 'https://telegra.ph/file/571bbfa73018406cf54d5.jpg' },
     {
-      caption: 'Hai '+ctx.from.first_name+' Aku adalah bot untuk mendownload video/photo dari instagram, silahkan ketik /igdl lalu tempelkan link, reels juga bisa loh!.',
+      caption: 'Hi 👋 I'm a instagram downloader bot!.\nMy menu : \n\n/igdl for download',
       parse_mode: 'Markdown',
       ...Markup.inlineKeyboard([
-        Markup.button.url('Subs Channel Bot', 't.me/nekozu'),
+        Markup.button.url('Subs Channel Bot', 't.me/akarida'),
       ])
     }
   )
-})
-
-bot.action('help', ctx => {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-    ctx.reply('/igdl -> untuk mendownload foto/video dari instagram\n')
 })                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 
 bot.command('igdl', async (ctx) => {
